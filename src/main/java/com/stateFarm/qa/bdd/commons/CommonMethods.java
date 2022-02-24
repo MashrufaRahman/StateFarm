@@ -2,14 +2,13 @@ package com.stateFarm.qa.bdd.commons;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-
 import com.stateFarm.qa.bdd.utilities.ConsoleLogger;
 
 public class CommonMethods {
 
 	public void dropDown(WebElement element, String text) {
 		Select select = new Select(element);
-		select.selectByVisibleText(text);
+		select.selectByValue(text);
 		ConsoleLogger.log("dropDown" + element);
 	}
 

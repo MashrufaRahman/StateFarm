@@ -6,10 +6,10 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "features",
-					glue = "classpath:/com/stateFarm/qa/bdd/steps",
+@CucumberOptions(features = "Features",
+					glue = "com.stateFarm.qa.bdd.steps",
+				    dryRun = false,
 					monochrome = true,
-					dryRun = false,
 					plugin = {"json:target/jsonReport.json", "junit:target/xmlReport.xml", "html:target/htmlReport.html"}
 					)
 					
